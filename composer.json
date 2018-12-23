@@ -1,0 +1,19 @@
+{
+    "name": "racztiborzoltan/sitebuild-layer",
+    "description": "Simple SiteBuild Layer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rácz Tibor Zoltán",
+            "email": "racztiborzoltan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Z\\SiteBuildLayer\\": "src"
+        }
+    },
+    "require": {
+        "psr/http-message": "^1.0"
+    }
+}
