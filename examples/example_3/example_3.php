@@ -11,6 +11,8 @@ use Z\SiteBuildLayer\AbstractSiteBuildLayer;
 
 require_once '../../vendor/autoload.php';
 
+require_once __DIR__ . '/classes/MustacheFileSiteBuildLayer.php';
+
 $page_type = $_GET['page_type'] ?? 'index';
 
 // sitebuild object initialization:
@@ -81,8 +83,8 @@ function getContactSiteBuild(): AbstractSiteBuildLayer
     $index_sitebuild = factorySiteBuild();
 
     // contact content sitebuild layer:
-    $contact_content = new PhpFileSiteBuildLayer();
-    $contact_content->setPhpFilePath(__DIR__ . '/templates/content_contact.php');
+    $contact_content = new MustacheFileSiteBuildLayer();
+    $contact_content->setMustacheFilePath(__DIR__ . '/templates/content_contact.mustache');
     $contact_content->setVariable('name', 'John Doe');
     $contact_content->setVariable('phone', '+1-541-754-3010');
     $contact_content->setVariable('email', 'email@example.com');
