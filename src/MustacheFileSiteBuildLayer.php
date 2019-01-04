@@ -1,5 +1,5 @@
 <?php
-use Z\SiteBuildLayer\AbstractSiteBuildLayer;
+namespace Z\SiteBuildLayer;
 
 class MustacheFileSiteBuildLayer extends AbstractSiteBuildLayer
 {
@@ -23,7 +23,7 @@ class MustacheFileSiteBuildLayer extends AbstractSiteBuildLayer
 
     public function render(): string
     {
-        $mustache = new Mustache_Engine();
+        $mustache = new \Mustache_Engine();
 
         $mustache_file_path = $this->getMustacheFilePath();
         if (empty($mustache_file_path) || !is_file($mustache_file_path)) {

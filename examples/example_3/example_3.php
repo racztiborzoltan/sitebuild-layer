@@ -2,6 +2,7 @@
 use Z\SiteBuildLayer\PhpFileSiteBuildLayer;
 use Z\SiteBuildLayer\SiteBuild;
 use Z\SiteBuildLayer\AbstractSiteBuildLayer;
+use Z\SiteBuildLayer\MustacheFileSiteBuildLayer;
 
 /**
  * Example
@@ -10,8 +11,6 @@ use Z\SiteBuildLayer\AbstractSiteBuildLayer;
  */
 
 require_once '../../vendor/autoload.php';
-
-require_once __DIR__ . '/classes/MustacheFileSiteBuildLayer.php';
 
 $page_type = $_GET['page_type'] ?? 'index';
 

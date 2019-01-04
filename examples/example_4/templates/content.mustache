@@ -1,0 +1,48 @@
+{{!
+/**
+ * TEMPLATE VARIABLES
+ *
+ * @var string global_hello_name
+ * @var array table_data
+ * @var array translations
+ */
+}}
+<hr />
+<h2>
+	global hello world in content: 
+	<span class="name">
+		{{ global_hello_name }}
+	</span>
+	!
+</h2>
+<table>
+	<thead>
+		<tr>
+    		<th>
+                {{ translations.Title }}
+			</tn>
+    		<th>
+                {{ translations.Director }}
+			</tn>
+    		<th>
+                {{ translations.Year }}
+			</tn>
+		</tr>
+	</thead>
+	<tbody>
+        {{#table_data}}
+            <tr>
+            	<td>
+                    {{ title }}
+            	</td>
+            	<td>
+                    {{ director }}
+            	</td>
+            	<td>
+                    {{ year }}
+            	</td>
+            </tr>
+        {{/table_data}}
+	</tbody>
+</table>
+<hr />
